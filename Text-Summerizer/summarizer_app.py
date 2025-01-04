@@ -1,3 +1,4 @@
+import cloudpickle
 import pickle
 import streamlit as st
 import nltk
@@ -14,7 +15,11 @@ nltk.download('wordnet')
 nltk.download('punkt_tab')
 
 # Load the pickled summarizer function
-with open("text_rank_summarizer.pkl", "rb") as f:
+# with open("/workspaces/Test-News-Summerizer/Text-Summerizer/text_rank_summarizer.pkl", "rb") as f:
+#     text_rank_summarizer = pickle.load(f)
+
+# Load the function using cloudpickle
+with open("/workspaces/Test-News-Summerizer/Text-Summerizer/text_rank_summarizer.pkl", "rb") as f:
     text_rank_summarizer = pickle.load(f)
 
 # Streamlit UI code
