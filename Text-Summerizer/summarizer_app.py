@@ -10,6 +10,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 # Download NLTK resources
 nltk.download('punkt')
 nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('punkt_tab')
 
 # Load the pickled summarizer function
 with open("text_rank_summarizer.pkl", "rb") as f:
